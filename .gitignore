@@ -1,3 +1,11 @@
+#original code file 
+old_code.py
+
+praw.ini
+scraper_test.ini
+
+#vs code
+.vscode/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +135,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+pyvenv.cfg
