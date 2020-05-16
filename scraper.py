@@ -174,9 +174,6 @@ class Aggregator:
         total = sum(len(x) for _, x in self.to_download)
         error_log = ''
         for dest, items in self.to_download:
-            print(dest)
-            print(len(items))
-        for dest, items in self.to_download:
             for info in items:
                 file_ext = info['content_type'].split('/')[-1]
                 clean_title = self.slugify(info['title'])
@@ -191,6 +188,7 @@ class Aggregator:
                     printProgressBar(i, total, prefix='Downloading images progress:', suffix='complete')
         if error_log:
             print('\n')
-            print(error_log)
+            print(Fore.RED + 'Error(s) has occurred while downloading images.')
+            print(Fore.RED + error_log)
 a = Aggregator()
 a.download_images()
